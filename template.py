@@ -21,7 +21,8 @@ list_of_files = [
     "params.yml",
     "requirements.txt",
     "setup.py",
-    "research/trials.ipynb"
+    "research/trials.ipynb",
+    "templates/index.html"
     ]
 # .gitkeep is to commit the empty folder and it will be replaced by the .yml that we create
 # __init__ --> local package concept --> here, 
@@ -32,7 +33,7 @@ for filepath in list_of_files:
     
     if filedir != "":
         os.makedirs(filedir, exist_ok= True)
-        logging.info(f"Creating director: {filedir} for the file: {filename}")
+        logging.info(f"Creating directory: {filedir} for the file: {filename}")
 
     if (not os.path.exists(filepath)) or (os.path.getsize(filepath == 0)):
         with open(filepath, "w") as f:
